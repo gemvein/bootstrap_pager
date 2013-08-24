@@ -275,26 +275,23 @@ or edit gemfile:
 
 More features are coming, and again, this is still experimental. Please let us know if you found anything wrong with the Sinatra support.
 
+=== Infinite Scroll with Jquery
 
-== For more information
+For infinite scroll technology, add jquery.infinitescroll to your application.js file.
 
-Check out Pager recipes on the GitHub Wiki for more advanced tips and techniques.
-https://github.com/amatsuda/pager/wiki/Pager-recipes
+    //= require jquery.infinitescroll
+    //= require infinitescroll
 
+Then, add class="infinitescroll" to the div containing your pagination call, and add the class "infinitescroll-item" to the items within that div that represent individual objects.
 
-== Build Status {<img src="https://travis-ci.org/amatsuda/pager.png"/>}[http://travis-ci.org/amatsuda/pager]
-
-
-== Questions, Feedback
-
-Feel free to message me on Github (amatsuda) or Twitter (@a_matsuda)  ☇☇☇  :)
-
-
-== Contributing to Pager
-
-* Fork, fix, then send me a pull request.
-
+    <div id="posts" class="infinitescroll">
+        <div id="post_5" class="infinitescroll-item">
+            ... Post content here ...
+        </div>
+        ... Many more posts here ...
+        <%= pagination @posts %>
+    </div>
 
 == Copyright
 
-Copyright (c) 2011 Akira Matsuda. See MIT-LICENSE for further details.
+Copyright (c) 2013 Sour Cherry Web. See MIT-LICENSE for further details.

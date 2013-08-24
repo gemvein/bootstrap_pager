@@ -42,8 +42,8 @@ describe 'Pager::ActionViewExtension' do
       end
       if defined? Rails
         context 'using custom engine namespace' do
-        subject { helper.link_to_previous_page @users, 'Previous', :params => {:controller => 'my_engine/items', :action => 'index'}, :engine_namespace => my_engine }
-        it { should match(%r(/mounted_engine/items)) }
+          subject { helper.link_to_previous_page @users, 'Previous', :params => {:controller => 'my_engine/items', :action => 'index'}, :engine_namespace => my_engine }
+          it { should match(%r(/mounted_engine/items)) }
         end
       end
     end
@@ -53,12 +53,6 @@ describe 'Pager::ActionViewExtension' do
       end
       subject { helper.link_to_previous_page @users, 'Previous', :params => {:controller => 'users', :action => 'index'} }
       it { should_not be }
-    end
-    if defined? Rails
-      context 'using custom engine namespace' do
-        subject { helper.link_to_next_page @users, 'More', :params => {:controller => 'my_engine/items', :action => 'index'}, :engine_namespace => my_engine }
-        it { should match(%r(/mounted_engine/items)) }
-      end
     end
   end
 
@@ -78,6 +72,12 @@ describe 'Pager::ActionViewExtension' do
       context 'overriding rel=' do
         subject { helper.link_to_next_page @users, 'More', :rel => 'external', :params => {:controller => 'users', :action => 'index'} }
         it { should match(/rel="external"/) }
+      end
+      if defined? Rails
+        context 'using custom engine namespace' do
+          subject { helper.link_to_next_page @users, 'More', :params => {:controller => 'my_engine/items', :action => 'index'}, :engine_namespace => my_engine }
+          it { should match(%r(/mounted_engine/items)) }
+        end
       end
     end
     context 'the last page' do

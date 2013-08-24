@@ -16,7 +16,7 @@ module Pager
       def initialize(template, options = {}) #:nodoc:
         @template, @options = template, options.dup
         @param_name = @options.delete(:param_name)
-        @engine = @options.delete(:engine_namespace)
+        @engine_namespace = @options.delete(:engine_namespace)
         @theme = @options[:theme] ? "#{@options.delete(:theme)}/" : ''
         @params = @options[:params] ? template.params.merge(@options.delete :params) : template.params
       end

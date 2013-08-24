@@ -9,43 +9,43 @@ feature 'Users' do
     visit '/users'
 
     within 'nav.pagination' do
-      within 'span.page.current' do
+      within 'li.page.active' do
         page.should have_content '1'
       end
-      within 'span.next' do
+      within 'li.next' do
         click_link 'Next ›'
       end
     end
 
     within 'nav.pagination' do
-      within 'span.page.current' do
+      within 'li.page.active' do
         page.should have_content '2'
       end
-      within 'span.last' do
+      within 'li.last' do
         click_link 'Last »'
       end
     end
 
     within 'nav.pagination' do
-      within 'span.page.current' do
+      within 'li.page.active' do
         page.should have_content '4'
       end
-      within 'span.prev' do
+      within 'li.prev' do
         click_link '‹ Prev'
       end
     end
 
     within 'nav.pagination' do
-      within 'span.page.current' do
+      within 'li.page.active' do
         page.should have_content '3'
       end
-      within 'span.first' do
+      within 'li.first' do
         click_link '« First'
       end
     end
 
     within 'nav.pagination' do
-      within 'span.page.current' do
+      within 'li.page.active' do
         page.should have_content '1'
       end
     end
