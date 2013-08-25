@@ -297,6 +297,10 @@ Then, add class="infinitescroll" to the div containing your pagination call, and
         ... Many more posts here ...
         <%= pagination @posts %>
     </div>
+    
+== Contributors    
+* Karen Lundgren - code updates
+* Chad Lundgren - verbiage and usability advice
 
 == Copyright
 
