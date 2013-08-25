@@ -1,7 +1,13 @@
 = Pager
 
-A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for modern web app frameworks and ORMs
+Pager is a fork of the Kaminari pager, which is a Scope & Engine based, clean, powerful, customizable and sophisticated paginator for modern web app frameworks and ORMs
 
+
+== New Features added in Pager
+* Works with Bootstrap out of the box
+* Now works with mountable rails engines using a namespaced route
+* Semantic HTML5 markup goodness
+* Added optional infinite scroll (off by default)
 
 == Features
 
