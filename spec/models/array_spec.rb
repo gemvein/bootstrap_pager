@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe Pager::PaginatableArray do
+describe BootstrapPager::PaginatableArray do
   it { should have(0).items }
 
   context 'specifying limit and offset when initializing' do
-    subject { Pager::PaginatableArray.new((1..100).to_a, :limit => 10, :offset => 20) }
+    subject { BootstrapPager::PaginatableArray.new((1..100).to_a, :limit => 10, :offset => 20) }
     its(:current_page) { should == 3 }
   end
 
-  let(:array) { Pager::PaginatableArray.new((1..100).to_a) }
+  let(:array) { BootstrapPager::PaginatableArray.new((1..100).to_a) }
   describe '#page' do
     shared_examples_for 'the first page of array' do
       it { should have(25).users }
@@ -142,7 +142,7 @@ describe Pager::PaginatableArray do
   end
 
   context 'when setting total count explicitly' do
-    subject { Pager::PaginatableArray.new((1..10).to_a, :total_count => 9999).page(5).per(10) }
+    subject { BootstrapPager::PaginatableArray.new((1..10).to_a, :total_count => 9999).page(5).per(10) }
     it { should have(10).items }
     its(:first) { should == 1 }
     its(:total_count) { should == 9999 }

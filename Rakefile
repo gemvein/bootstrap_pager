@@ -33,10 +33,10 @@ end
 require 'rdoc/task'
 
 Rake::RDocTask.new do |rdoc|
-  require 'pager/version'
+  require 'bootstrap_pager/version'
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "pager #{Pager::VERSION}"
+  rdoc.title = "bootstrap_pager #{BootstrapPager::VERSION}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

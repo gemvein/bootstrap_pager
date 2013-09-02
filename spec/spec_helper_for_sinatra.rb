@@ -1,5 +1,5 @@
-require 'pager/sinatra'
-require 'pager/helpers/action_view_extension'
+require 'bootstrap_pager/sinatra'
+require 'bootstrap_pager/helpers/action_view_extension'
 require 'rack/test'
 require 'sinatra/test_helpers'
 require 'capybara/rspec'
@@ -17,7 +17,7 @@ module HelperMethodForHelperSpec
 
   def helper
     # OMG terrible object...
-    ::Pager::Helpers::SinatraHelpers::ActionViewTemplateProxy.new(:current_params => {}, :current_path => '/', :param_name => Pager.config.param_name).extend(Padrino::Helpers, Pager::ActionViewExtension, Pager::Helpers::SinatraHelpers::HelperMethods, FakeEnv)
+    ::BootstrapPager::Helpers::SinatraHelpers::ActionViewTemplateProxy.new(:current_params => {}, :current_path => '/', :param_name => BootstrapPager.config.param_name).extend(Padrino::Helpers, BootstrapPager::ActionViewExtension, BootstrapPager::Helpers::SinatraHelpers::HelperMethods, FakeEnv)
   end
 end
 

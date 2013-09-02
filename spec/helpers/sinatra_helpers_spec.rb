@@ -23,7 +23,7 @@ EOT
   </div>
 EOT
 
-  describe 'Pager::Helpers::SinatraHelper' do
+  describe 'BootstrapPager::Helpers::SinatraHelper' do
     before do
       50.times {|i| User.create! :name => "user#{i}"}
     end
@@ -31,7 +31,7 @@ EOT
     describe '#paginate' do
       before do
         mock_app do
-          register Pager::Helpers::SinatraHelpers
+          register BootstrapPager::Helpers::SinatraHelpers
           get '/users' do
             @page = params[:page] || 1
             @users = User.page(@page)
@@ -76,7 +76,7 @@ EOT
       context 'optional paginations with Sinatra' do
         it 'should have 5 windows with 1 gap' do
           mock_app do
-            register Pager::Helpers::SinatraHelpers
+            register BootstrapPager::Helpers::SinatraHelpers
             get '/users' do
               @page = params[:page] || 1
               @users = User.page(@page).per(5)
@@ -92,7 +92,7 @@ EOT
 
         it 'should controll the inner window size' do
           mock_app do
-            register Pager::Helpers::SinatraHelpers
+            register BootstrapPager::Helpers::SinatraHelpers
             get '/users' do
               @page = params[:page] || 1
               @users = User.page(@page).per(3)
@@ -108,7 +108,7 @@ EOT
 
         it 'should specify a page param name' do
           mock_app do
-            register Pager::Helpers::SinatraHelpers
+            register BootstrapPager::Helpers::SinatraHelpers
             get '/users' do
               @page = params[:page] || 1
               @users = User.page(@page).per(3)
@@ -128,7 +128,7 @@ EOT
     describe '#link_to_next_page' do
       before do
         mock_app do
-          register Pager::Helpers::SinatraHelpers
+          register BootstrapPager::Helpers::SinatraHelpers
           get '/users' do
             @page = params[:page] || 1
             @users = User.page(@page)

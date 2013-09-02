@@ -1,14 +1,14 @@
-module Pager
+module BootstrapPager
   module Generators
 
     class ViewsGenerator < Rails::Generators::NamedBase
-      source_root File.expand_path('../../../../app/views/pager', __FILE__)
+      source_root File.expand_path('../../../../app/views/bootstrap_pager', __FILE__)
 
       class_option :template_engine, :type => :string, :aliases => '-e', :desc => 'Template engine for the views. Available options are "erb", "haml", and "slim".'
 
       def self.banner #:nodoc:
         <<-BANNER.chomp
-rails g pager:views THEME [options]
+rails g bootstrap_pager:views THEME [options]
 
     Copies all paginator partial templates to your application.
     You can choose a template THEME by specifying one from the list below:
@@ -45,7 +45,7 @@ BANNER
 
       def download_templates(theme)
         theme.templates_for(template_engine).each do |template|
-          say "      downloading #{template.name} from pager_themes..."
+          say "      downloading #{template.name} from bootstrap_pager_themes..."
           create_file template.name, GitHubApiHelper.get_content_for("#{theme.name}/#{template.name}")
         end
       end
@@ -53,7 +53,7 @@ BANNER
       def copy_default_views
         filename_pattern = File.join self.class.source_root, "*.html.#{template_engine}"
         Dir.glob(filename_pattern).map {|f| File.basename f}.each do |f|
-          copy_file f, "app/views/pager/#{f}"
+          copy_file f, "app/views/bootstrap_pager/#{f}"
         end
       end
 
@@ -95,10 +95,10 @@ BANNER
 
     module GitHubApiHelper
       def get_files_in_master
-        master_tree_sha = open('https://api.github.com/repos/amatsuda/pager_themes/git/refs/heads/master') do |json|
+        master_tree_sha = open('https://api.github.com/repos/amatsuda/bootstrap_pager_themes/git/refs/heads/master') do |json|
           ActiveSupport::JSON.decode(json)['object']['sha']
         end
-        open('https://api.github.com/repos/amatsuda/pager_themes/git/trees/' + master_tree_sha + '?recursive=1') do |json|
+        open('https://api.github.com/repos/amatsuda/bootstrap_pager_themes/git/trees/' + master_tree_sha + '?recursive=1') do |json|
           blobs = ActiveSupport::JSON.decode(json)['tree'].find_all {|i| i['type'] == 'blob' }
           blobs.map do |blob|
             [blob['path'], blob['sha']]
@@ -108,7 +108,7 @@ BANNER
       module_function :get_files_in_master
 
       def get_content_for(path)
-        open('https://api.github.com/repos/amatsuda/pager_themes/contents/' + path) do |json|
+        open('https://api.github.com/repos/amatsuda/bootstrap_pager_themes/contents/' + path) do |json|
           Base64.decode64(ActiveSupport::JSON.decode(json)['content'])
         end
       end

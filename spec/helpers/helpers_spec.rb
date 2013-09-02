@@ -1,7 +1,7 @@
 require 'spec_helper'
-include Pager::Helpers
+include BootstrapPager::Helpers
 
-describe 'Pager::Helpers::Paginator' do
+describe 'BootstrapPager::Helpers::Paginator' do
   let :template do
     stub(r = Object.new) do
       render.with_any_args

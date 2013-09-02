@@ -1,18 +1,18 @@
 require 'spec_helper'
 
-describe Pager::Configuration do
-  subject { Pager.config }
+describe BootstrapPager::Configuration do
+  subject { BootstrapPager.config }
   describe 'default_per_page' do
     context 'by default' do
       its(:default_per_page) { should == 25 }
     end
     context 'configured via config block' do
       before do
-        Pager.configure {|c| c.default_per_page = 17}
+        BootstrapPager.configure {|c| c.default_per_page = 17}
       end
       its(:default_per_page) { should == 17 }
       after do
-        Pager.configure {|c| c.default_per_page = 25}
+        BootstrapPager.configure {|c| c.default_per_page = 25}
       end
     end
   end
@@ -23,11 +23,11 @@ describe Pager::Configuration do
     end
     context 'configure via config block' do
       before do
-        Pager.configure {|c| c.max_per_page = 100}
+        BootstrapPager.configure {|c| c.max_per_page = 100}
       end
       its(:max_per_page) { should == 100 }
       after do
-        Pager.configure {|c| c.max_per_page = nil}
+        BootstrapPager.configure {|c| c.max_per_page = nil}
       end
     end
   end
@@ -63,13 +63,13 @@ describe Pager::Configuration do
 
     context 'configured via config block' do
       before do
-        Pager.configure {|c| c.param_name = lambda { :test } }
+        BootstrapPager.configure {|c| c.param_name = lambda { :test } }
       end
 
       its(:param_name) { should == :test }
 
       after do
-        Pager.configure {|c| c.param_name = :page }
+        BootstrapPager.configure {|c| c.param_name = :page }
       end
     end
   end
@@ -80,11 +80,11 @@ describe Pager::Configuration do
     end
     context 'configure via config block' do
       before do
-        Pager.configure {|c| c.max_pages = 5}
+        BootstrapPager.configure {|c| c.max_pages = 5}
       end
       its(:max_pages) { should == 5 }
       after do
-        Pager.configure {|c| c.max_pages = nil}
+        BootstrapPager.configure {|c| c.max_pages = nil}
       end
     end
   end

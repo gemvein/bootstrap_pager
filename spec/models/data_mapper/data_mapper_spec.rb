@@ -2,7 +2,7 @@ require 'spec_helper'
 
 if defined? DataMapper
   # tests for issue #203
-  describe Pager::DataMapperCollectionMethods do
+  describe BootstrapPager::DataMapperCollectionMethods do
     before do
       100.times do |i|
         User.create(:name => "User#{i}", :age => i)
@@ -29,7 +29,7 @@ if defined? DataMapper
 
   end
 
-  describe Pager::DataMapperExtension do
+  describe BootstrapPager::DataMapperExtension do
     before do
       100.times do |i|
         User.create(:name => "User#{i}", :age => i)

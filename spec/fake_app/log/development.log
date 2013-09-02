@@ -1,0 +1,832 @@
+DEPRECATION WARNING: Using #scope without passing a callable object is deprecated. For example `scope :red, where(color: 'red')` should be changed to `scope :red, -> { where(color: 'red') }`. There are numerous gotchas in the former usage and it makes the implementation more complicated and buggy. (If you prefer, you can just define a class method named `self.red`.). (called from <class:User> at /home/work/Sites/bootstrap_pager/spec/fake_app/active_record/models.rb:13)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/work/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/application.rb:141)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: users, books) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:17)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: users, books) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from block (4 levels) in <top (required)> at /home/work/Sites/bootstrap_pager/spec/models/active_record/active_record_relation_methods_spec.rb:35)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 20:46:23 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 38ms (Views: 37.0ms)
+DEPRECATION WARNING: Using #scope without passing a callable object is deprecated. For example `scope :red, where(color: 'red')` should be changed to `scope :red, -> { where(color: 'red') }`. There are numerous gotchas in the former usage and it makes the implementation more complicated and buggy. (If you prefer, you can just define a class method named `self.red`.). (called from <class:User> at /home/work/Sites/bootstrap_pager/spec/fake_app/active_record/models.rb:13)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/work/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/application.rb:141)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: users, books) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:17)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: users, books) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from block (4 levels) in <top (required)> at /home/work/Sites/bootstrap_pager/spec/models/active_record/active_record_relation_methods_spec.rb:35)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 20:52:14 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 39ms (Views: 38.0ms)
+DEPRECATION WARNING: Using #scope without passing a callable object is deprecated. For example `scope :red, where(color: 'red')` should be changed to `scope :red, -> { where(color: 'red') }`. There are numerous gotchas in the former usage and it makes the implementation more complicated and buggy. (If you prefer, you can just define a class method named `self.red`.). (called from <class:User> at /home/work/Sites/bootstrap_pager/spec/fake_app/active_record/models.rb:13)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/work/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/application.rb:141)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: users, books) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:17)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: users, books) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from block (4 levels) in <top (required)> at /home/work/Sites/bootstrap_pager/spec/models/active_record/active_record_relation_methods_spec.rb:35)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:00:59 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 66ms (Views: 64.2ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-23 21:00:59 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 332ms (Views: 331.2ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-23 21:00:59 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 64ms (Views: 40.4ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-23 21:00:59 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 48ms (Views: 47.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:00:59 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 86ms (Views: 84.5ms)
+DEPRECATION WARNING: Using #scope without passing a callable object is deprecated. For example `scope :red, where(color: 'red')` should be changed to `scope :red, -> { where(color: 'red') }`. There are numerous gotchas in the former usage and it makes the implementation more complicated and buggy. (If you prefer, you can just define a class method named `self.red`.). (called from <class:User> at /home/work/Sites/bootstrap_pager/spec/fake_app/active_record/models.rb:13)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/work/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/application.rb:141)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: users, books) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:17)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: users, books) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from block (4 levels) in <top (required)> at /home/work/Sites/bootstrap_pager/spec/models/active_record/active_record_relation_methods_spec.rb:35)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:05:27 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 53ms (Views: 50.7ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-23 21:05:27 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 185ms (Views: 184.4ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-23 21:05:27 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 34ms (Views: 33.8ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-23 21:05:27 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 33ms (Views: 31.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:05:27 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 38ms (Views: 32.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:07:39 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 27ms (Views: 26.5ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-23 21:07:40 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 24ms (Views: 23.8ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-23 21:07:40 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 17ms (Views: 16.0ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-23 21:07:40 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 18ms (Views: 16.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:07:40 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 33ms (Views: 31.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:09:48 -0600
+  Processing by UsersController#index as HTML
+Completed 200 OK in 35ms (Views: 34.0ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-23 21:09:48 -0600
+  Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 72ms (Views: 71.1ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-23 21:09:48 -0600
+  Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 14ms (Views: 12.3ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-23 21:09:48 -0600
+  Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 18ms (Views: 17.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:09:48 -0600
+  Processing by UsersController#index as HTML
+Completed 200 OK in 12ms (Views: 11.8ms)
+DEPRECATION WARNING: Using #scope without passing a callable object is deprecated. For example `scope :red, where(color: 'red')` should be changed to `scope :red, -> { where(color: 'red') }`. There are numerous gotchas in the former usage and it makes the implementation more complicated and buggy. (If you prefer, you can just define a class method named `self.red`.). (called from <class:User> at /home/work/Sites/bootstrap_pager/spec/fake_app/active_record/models.rb:13)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/work/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/application.rb:141)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: users, books) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:17)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: users, books) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from block (4 levels) in <top (required)> at /home/work/Sites/bootstrap_pager/spec/models/active_record/active_record_relation_methods_spec.rb:35)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:20)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:14:41 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 37ms (Views: 35.5ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-23 21:14:41 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 56ms (Views: 55.0ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-23 21:14:42 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 48ms (Views: 45.0ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-23 21:14:42 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 36ms (Views: 35.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:14:42 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 51ms (Views: 50.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:16:21 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 35ms (Views: 32.3ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-23 21:16:21 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 24ms (Views: 22.3ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-23 21:16:21 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 25ms (Views: 24.2ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-23 21:16:21 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 29ms (Views: 28.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:16:21 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 19ms (Views: 18.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-23 21:21:00 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 65ms (Views: 63.3ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-23 21:21:00 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 26ms (Views: 25.6ms)
+
+
+Started GET "/users?page=20" for 127.0.0.1 at 2013-08-23 21:21:00 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"20"}
+Completed 200 OK in 15ms (Views: 13.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 13:32:19 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 48ms (Views: 47.1ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 13:32:20 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 90ms (Views: 89.5ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 13:32:20 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 39ms (Views: 35.5ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 13:32:20 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 53ms (Views: 52.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 13:32:20 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 63ms (Views: 61.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 13:38:38 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 80ms (Views: 78.8ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 13:38:38 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 82ms (Views: 80.4ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 13:38:38 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 34ms (Views: 29.3ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 13:38:38 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 58ms (Views: 55.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 13:38:39 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 32ms (Views: 31.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 13:49:17 -0600
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 192ms
+
+ActionView::Template::Error (undefined method `match' for nil:NilClass):
+    1: <%= @users.map(&:name).join("
+    2: ") %>
+    3: <%= paginate @users %>
+  /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:23:in `total_count'
+  /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/page_scope_methods.rb:22:in `total_pages'
+  /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/helpers/action_view_extension.rb:19:in `paginate'
+  inline template:3:in `_inline_template___168882423335613430_39203360'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/template.rb:143:in `block in render'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/notifications.rb:159:in `block in instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/notifications.rb:159:in `instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/template.rb:337:in `instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/template.rb:141:in `render'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/notifications.rb:159:in `block in instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/notifications.rb:159:in `instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/renderer/template_renderer.rb:17:in `render'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/renderer/renderer.rb:42:in `render_template'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionview/lib/action_view/renderer/renderer.rb:23:in `render'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/abstract_controller/rendering.rb:127:in `_render_template'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/renderers.rb:33:in `render_to_body'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/abstract_controller/rendering.rb:97:in `render'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/rendering.rb:16:in `render'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/work/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/instrumentation.rb:40:in `render'
+  rails_app.rb:50:in `index'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/abstract_controller/base.rb:189:in `process_action'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/callbacks.rb:82:in `run_callbacks'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/abstract_controller/callbacks.rb:19:in `process_action'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/notifications.rb:159:in `block in instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/notifications.rb:159:in `instrument'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/abstract_controller/base.rb:136:in `process'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/abstract_controller/rendering.rb:44:in `process'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal.rb:195:in `dispatch'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_controller/metal.rb:231:in `block in action'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/routing/route_set.rb:80:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/routing/route_set.rb:48:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/journey/router.rb:71:in `block in call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/journey/router.rb:59:in `each'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/journey/router.rb:59:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/routing/route_set.rb:680:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/callbacks.rb:82:in `run_callbacks'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/railties/lib/rails/rack/logger.rb:38:in `call_app'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/railties/lib/rails/rack/logger.rb:21:in `block in call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/tagged_logging.rb:25:in `tagged'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/tagged_logging.rb:67:in `tagged'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/railties/lib/rails/rack/logger.rb:21:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/activesupport/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/actionpack/lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/railties/lib/rails/engine.rb:511:in `call'
+  /home/work/.rvm/gems/ruby-1.9.3-p448/bundler/gems/rails-8f7b3e166a3e/railties/lib/rails/application.rb:139:in `call'
+  rack (1.5.2) lib/rack/builder.rb:138:in `call'
+  rack (1.5.2) lib/rack/urlmap.rb:65:in `block in call'
+  rack (1.5.2) lib/rack/urlmap.rb:50:in `each'
+  rack (1.5.2) lib/rack/urlmap.rb:50:in `call'
+  rack-test (0.6.2) lib/rack/mock_session.rb:30:in `request'
+  rack-test (0.6.2) lib/rack/test.rb:230:in `process_request'
+  rack-test (0.6.2) lib/rack/test.rb:57:in `get'
+  /home/work/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/forwardable.rb:201:in `get'
+  capybara (2.1.0) lib/capybara/rack_test/browser.rb:59:in `process'
+  capybara (2.1.0) lib/capybara/rack_test/browser.rb:35:in `process_and_follow_redirects'
+  capybara (2.1.0) lib/capybara/rack_test/browser.rb:21:in `visit'
+  capybara (2.1.0) lib/capybara/rack_test/driver.rb:42:in `visit'
+  capybara (2.1.0) lib/capybara/session.rb:193:in `visit'
+  capybara (2.1.0) lib/capybara/dsl.rb:51:in `block (2 levels) in <module:DSL>'
+  /home/work/Sites/bootstrap_pager/spec/requests/users_spec.rb:9:in `block (2 levels) in <top (required)>'
+  rspec-core (2.14.5) lib/rspec/core/example.rb:114:in `instance_eval'
+  rspec-core (2.14.5) lib/rspec/core/example.rb:114:in `block in run'
+  rspec-core (2.14.5) lib/rspec/core/example.rb:179:in `call'
+  rspec-core (2.14.5) lib/rspec/core/example.rb:179:in `run'
+  rspec-rails (2.14.0) lib/rspec/rails/adapters.rb:51:in `block (2 levels) in <module:MiniTestLifecycleAdapter>'
+  rspec-core (2.14.5) lib/rspec/core/extensions/instance_eval_with_args.rb:16:in `instance_exec'
+  rspec-core (2.14.5) lib/rspec/core/extensions/instance_eval_with_args.rb:16:in `instance_eval_with_args'
+  rspec-core (2.14.5) lib/rspec/core/example.rb:247:in `instance_eval_with_args'
+  rspec-core (2.14.5) lib/rspec/core/hooks.rb:106:in `block (2 levels) in run'
+  rspec-core (2.14.5) lib/rspec/core/hooks.rb:104:in `call'
+  rspec-core (2.14.5) lib/rspec/core/hooks.rb:104:in `run'
+  rspec-core (2.14.5) lib/rspec/core/hooks.rb:446:in `run_hook'
+  rspec-core (2.14.5) lib/rspec/core/example_group.rb:340:in `run_around_each_hooks'
+  rspec-core (2.14.5) lib/rspec/core/example.rb:256:in `with_around_each_hooks'
+  rspec-core (2.14.5) lib/rspec/core/example.rb:111:in `run'
+  rspec-core (2.14.5) lib/rspec/core/example_group.rb:390:in `block in run_examples'
+  rspec-core (2.14.5) lib/rspec/core/example_group.rb:386:in `map'
+  rspec-core (2.14.5) lib/rspec/core/example_group.rb:386:in `run_examples'
+  rspec-core (2.14.5) lib/rspec/core/example_group.rb:371:in `run'
+  rspec-core (2.14.5) lib/rspec/core/command_line.rb:28:in `block (2 levels) in run'
+  rspec-core (2.14.5) lib/rspec/core/command_line.rb:28:in `map'
+  rspec-core (2.14.5) lib/rspec/core/command_line.rb:28:in `block in run'
+  rspec-core (2.14.5) lib/rspec/core/reporter.rb:58:in `report'
+  rspec-core (2.14.5) lib/rspec/core/command_line.rb:25:in `run'
+  rspec-core (2.14.5) lib/rspec/core/runner.rb:80:in `run'
+  rspec-core (2.14.5) lib/rspec/core/runner.rb:17:in `block in autorun'
+
+
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:00:34 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 336ms (Views: 332.2ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 14:00:35 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 83ms (Views: 81.0ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 14:00:35 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 68ms (Views: 64.3ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 14:00:35 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 54ms (Views: 53.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:00:35 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 91ms (Views: 90.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:10:47 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 120ms (Views: 119.3ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 14:10:48 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 58ms (Views: 57.3ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 14:10:48 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 86ms (Views: 83.2ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 14:10:48 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 329ms (Views: 324.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:10:48 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 76ms (Views: 75.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:27:29 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 38ms (Views: 36.1ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 14:27:29 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 52ms (Views: 51.3ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 14:27:30 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 60ms (Views: 59.7ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 14:27:30 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 27ms (Views: 26.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:27:30 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 126ms (Views: 124.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:34:43 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 36ms (Views: 34.4ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 14:34:44 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 52ms (Views: 51.0ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 14:34:44 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 38ms (Views: 36.1ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 14:34:44 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 66ms (Views: 65.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:34:44 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 170ms (Views: 169.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:39:16 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 22ms (Views: 21.3ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 14:39:16 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 34ms (Views: 33.6ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 14:39:16 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 22ms (Views: 21.5ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 14:39:16 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 21ms (Views: 20.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:39:16 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 93ms (Views: 92.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:48:45 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 32ms (Views: 31.9ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 14:48:45 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 18ms (Views: 17.5ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 14:48:45 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 16ms (Views: 15.4ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 14:48:45 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 16ms (Views: 16.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 14:48:45 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 14ms (Views: 13.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 16:59:03 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 41ms (Views: 40.5ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 16:59:03 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 37ms (Views: 36.6ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 16:59:03 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 26ms (Views: 24.8ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 16:59:04 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 38ms (Views: 36.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 16:59:04 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 25ms (Views: 23.5ms)
+DEPRECATION WARNING: Using #scope without passing a callable object is deprecated. For example `scope :red, where(color: 'red')` should be changed to `scope :red, -> { where(color: 'red') }`. There are numerous gotchas in the former usage and it makes the implementation more complicated and buggy. (If you prefer, you can just define a class method named `self.red`.). (called from <class:User> at /home/work/Sites/bootstrap_pager/spec/fake_app/active_record/models.rb:13)
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/work/.rvm/gems/ruby-1.9.3-p448/gems/railties-4.0.0/lib/rails/application.rb:141)
+DEPRECATION WARNING: It looks like you are eager loading table(s) (one of: users, books) that are referenced in a string SQL snippet. For example: 
+
+    Post.includes(:comments).where("comments.title = 'foo'")
+
+Currently, Active Record recognizes the table in the string, and knows to JOIN the comments table to the query, rather than loading comments in a separate query. However, doing this without writing a full-blown SQL parser is inherently flawed. Since we don't want to write an SQL parser, we are removing this functionality. From now on, you must explicitly tell Active Record when you are referencing a table from a string:
+
+    Post.includes(:comments).where("comments.title = 'foo'").references(:comments)
+
+If you don't rely on implicit join references you can disable the feature entirely by setting `config.active_record.disable_implicit_join_references = true`. (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:22)
+DEPRECATION WARNING: The :distinct option for `Relation#count` is deprecated. Please use `Relation#distinct` instead. (eg. `relation.distinct.count`). (called from total_count at /home/work/Sites/bootstrap_pager/lib/bootstrap_pager/models/active_record_relation_methods.rb:22)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 17:00:50 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 98ms (Views: 97.1ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 17:00:50 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 29ms (Views: 28.8ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 17:00:50 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 30ms (Views: 29.5ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 17:00:50 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 163ms (Views: 161.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 17:00:51 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 32ms (Views: 30.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 17:03:57 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 77ms (Views: 76.3ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 17:03:57 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 34ms (Views: 33.5ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 17:03:57 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 28ms (Views: 27.9ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 17:03:57 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 24ms (Views: 23.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 17:03:57 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 18ms (Views: 17.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 17:05:50 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 34ms (Views: 33.3ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 17:05:50 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 61ms (Views: 58.1ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 17:05:50 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 28ms (Views: 27.2ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 17:05:50 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 29ms (Views: 28.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 17:05:50 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 25ms (Views: 24.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 17:08:00 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 51ms (Views: 51.0ms)
+
+
+Started GET "/users?page=2" for 127.0.0.1 at 2013-08-24 17:08:00 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"2"}
+Completed 200 OK in 28ms (Views: 27.1ms)
+
+
+Started GET "/users?page=4" for 127.0.0.1 at 2013-08-24 17:08:00 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"4"}
+Completed 200 OK in 22ms (Views: 21.3ms)
+
+
+Started GET "/users?page=3" for 127.0.0.1 at 2013-08-24 17:08:00 -0600
+Processing by UsersController#index as HTML
+  Parameters: {"page"=>"3"}
+Completed 200 OK in 22ms (Views: 21.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2013-08-24 17:08:00 -0600
+Processing by UsersController#index as HTML
+Completed 200 OK in 64ms (Views: 63.5ms)

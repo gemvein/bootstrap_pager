@@ -9,8 +9,8 @@ end
 
 Mongoid.configure do |config|
   if Mongoid::VERSION =~ /^3/
-    config.sessions = {:default => {:hosts => ['localhost:27017'], :database => 'pager_test'}}
+    config.sessions = {:default => {:hosts => ['localhost:27017'], :database => 'bootstrap_pager_test'}}
   else
-    config.master = Mongo::Connection.new.db('pager_test')
+    config.master = Mongo::Connection.new.db('bootstrap_pager_test')
   end
 end

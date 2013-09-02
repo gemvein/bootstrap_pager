@@ -10,7 +10,7 @@ require 'fake_app/mongoid/models' if defined? Mongoid
 require 'fake_app/mongo_mapper/models' if defined? MongoMapper
 
 class SinatraApp < Sinatra::Base
-  register Pager::Helpers::SinatraHelpers
+  register BootstrapPager::Helpers::SinatraHelpers
 
   get '/users' do
     @users = User.page params[:page]

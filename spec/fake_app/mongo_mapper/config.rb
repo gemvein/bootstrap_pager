@@ -1,2 +1,2 @@
 MongoMapper.connection = Mongo::Connection.new 'localhost', 27017
-MongoMapper.database = 'pager_test'
+MongoMapper.database = 'bootstrap_pager_test'

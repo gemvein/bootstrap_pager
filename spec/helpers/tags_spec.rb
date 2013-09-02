@@ -1,7 +1,7 @@
 require 'spec_helper'
-include Pager::Helpers
+include BootstrapPager::Helpers
 
-describe 'Pager::Helpers' do
+describe 'BootstrapPager::Helpers' do
   describe 'Paginator' do
     describe 'Paginator::PageProxy' do
       describe '#current?' do

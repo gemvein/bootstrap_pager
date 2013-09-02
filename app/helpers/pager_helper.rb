@@ -1,5 +1,5 @@
-require 'pager/helpers/action_view_extension'
+require 'bootstrap_pager/helpers/action_view_extension'
 
-module PagerHelper
-  include Pager::ActionViewExtension
+module BootstrapPagerHelper
+  include BootstrapPager::ActionViewExtension
 end

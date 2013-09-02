@@ -1,4 +1,4 @@
-= Pager
+= Bootstrap Pager
 
 A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for modern web app frameworks and ORMs
 
@@ -16,10 +16,10 @@ Everything is method chainable with less "Hasheritis". You know, that's the Rail
 No special collection class or anything for the paginated values, instead using a general <tt>AR::Relation</tt> instance. So, of course you can chain any other conditions before or after the paginator scope.
 
 === Customizable engine-based I18n-aware helper
-As the whole pagination helper is basically just a collection of links and non-links, Pager renders each of them through its own partial template inside the Engine. So, you can easily modify their behaviour, style or whatever by overriding partial templates.
+As the whole pagination helper is basically just a collection of links and non-links, Bootstrap Pager renders each of them through its own partial template inside the Engine. So, you can easily modify their behaviour, style or whatever by overriding partial templates.
 
 === ORM & template engine agnostic
-Pager supports multiple ORMs (ActiveRecord, Mongoid, MongoMapper) multiple web frameworks (Rails, Sinatra), and multiple template engines (ERB, Haml).
+Bootstrap Pager supports multiple ORMs (ActiveRecord, Mongoid, MongoMapper) multiple web frameworks (Rails, Sinatra), and multiple template engines (ERB, Haml).
 
 === Modern
 The pagination helper outputs the HTML5 <nav> tag by default. Plus, the helper supports Rails 3 unobtrusive Ajax.
@@ -42,10 +42,10 @@ The pagination helper outputs the HTML5 <nav> tag by default. Plus, the helper s
 == Install
 
 Put this line in your Gemfile:
-  gem 'pager'
+  gem 'bootstrap_pager'
 
-Then bundle:
-  % bundle
+Then bundle install:
+  % bundle install
 
 
 == Usage
@@ -76,7 +76,7 @@ Then bundle:
 
 === General configuration options
 
-You can configure the following default values by overriding these values using <tt>Pager.configure</tt> method.
+You can configure the following default values by overriding these values using <tt>BootstrapPager.configure</tt> method.
   default_per_page  # 25 by default
   max_per_page      # nil by default
   window            # 4 by default
@@ -88,7 +88,7 @@ You can configure the following default values by overriding these values using 
 
 There's a handy generator that generates the default configuration file into config/initializers directory.
 Run the following generator command, then edit the generated file.
-  % rails g pager:config
+  % rails g bootstrap_pager:config
 
 * changing +page_method_name+
 
@@ -193,38 +193,38 @@ Keys and the default values are the following. You can override them by adding t
 
 === Customizing the pagination helper
 
-Pager includes a handy template generator.
+BootstrapPager includes a handy template generator.
 
 * to edit your paginator
 
   Run the generator first,
-    % rails g pager:views default
+    % rails g bootstrap_pager:views default
 
-  then edit the partials in your app's <tt>app/views/pager/</tt> directory.
+  then edit the partials in your app's <tt>app/views/bootstrap_pager/</tt> directory.
 
 * for Haml users
 
   Haml templates generator is also available by adding the <tt>-e haml</tt> option (this is automatically invoked when the default template_engine is set to Haml).
 
-    % rails g pager:views default -e haml
+    % rails g bootstrap_pager:views default -e haml
 
 * themes
 
   The generator has the ability to fetch several sample template themes from
-  the external repository (https://github.com/amatsuda/pager_themes) in
+  the external repository (https://github.com/amatsuda/bootstrap_pager_themes) in
   addition to the bundled "default" one, which will help you creating a nice
   looking paginator.
-    % rails g pager:views THEME
+    % rails g bootstrap_pager:views THEME
 
   To see the full list of avaliable themes, take a look at the themes repository,
   or just hit the generator without specifying +THEME+ argument.
-    % rails g pager:views
+    % rails g bootstrap_pager:views
 
 * multiple themes
 
-  To utilize multiple themes from within a single application, create a directory within the app/views/pager/ and move your custom template files into that directory.
-    % rails g pager:views default (skip if you have existing pager views)
-    % cd app/views/pager
+  To utilize multiple themes from within a single application, create a directory within the app/views/bootstrap_pager/ and move your custom template files into that directory.
+    % rails g bootstrap_pager:views default (skip if you have existing bootstrap_pager views)
+    % cd app/views/bootstrap_pager
     % mkdir my_custom_theme
     % cp _*.html.* my_custom_theme/
 
@@ -234,17 +234,17 @@ Pager includes a handy template generator.
 
   Customize away!
 
-  Note: if the theme isn't present or none is specified, pager will default back to the views included within the gem.
+  Note: if the theme isn't present or none is specified, bootstrap_pager will default back to the views included within the gem.
 
 === Paginating a generic Array object
 
-Pager provides an Array wrapper class that adapts a generic Array object to the <tt>paginate</tt> view helper.
+BootstrapPager provides an Array wrapper class that adapts a generic Array object to the <tt>paginate</tt> view helper.
 However, the <tt>paginate</tt> helper doesn't automatically handle your Array object (this is intentional and by design).
-<tt>Pager::paginate_array</tt> method converts your Array object into a paginatable Array that accepts <tt>page</tt> method.
-  Pager.paginate_array(my_array_object).page(params[:page]).per(10)
+<tt>BootstrapPager::paginate_array</tt> method converts your Array object into a paginatable Array that accepts <tt>page</tt> method.
+  BootstrapPager.paginate_array(my_array_object).page(params[:page]).per(10)
 
 You can specify the +total_count+ value through options Hash. This would be helpful when handling an Array-ish object that has a different +count+ value from actual +count+ such as RSolr search result or when you need to generate a custom pagination. For example:
-  Pager.paginate_array([], total_count: 145).page(params[:page]).per(10)
+  BootstrapPager.paginate_array([], total_count: 145).page(params[:page]).per(10)
 
 == Creating friendly URLs and caching
 
@@ -263,15 +263,15 @@ NOTE: In this example, I've pointed the route to my <tt>:index</tt> action. You 
 
 == Sinatra/Padrino support
 
-Since version 0.13.0, pager started to support Sinatra or Sinatra-based frameworks experimentally.
+Since version 0.13.0, bootstrap_pager started to support Sinatra or Sinatra-based frameworks experimentally.
 
-To use pager and its helpers with these frameworks,
+To use bootstrap_pager and its helpers with these frameworks,
 
-    require 'pager/sinatra'
+    require 'bootstrap_pager/sinatra'
 
 or edit gemfile:
 
-    gem 'pager', :require => 'pager/sinatra'
+    gem 'bootstrap_pager', :require => 'bootstrap_pager/sinatra'
 
 More features are coming, and again, this is still experimental. Please let us know if you found anything wrong with the Sinatra support.
 

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 if defined? ActiveRecord
-  describe Pager::ActiveRecordRelationMethods do
+  describe BootstrapPager::ActiveRecordRelationMethods do
     describe '#total_count' do
       before do
         @author = User.create! :name => 'author'

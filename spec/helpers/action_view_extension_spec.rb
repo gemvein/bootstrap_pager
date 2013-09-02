@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Pager::ActionViewExtension' do
+describe 'BootstrapPager::ActionViewExtension' do
   describe '#paginate' do
     before do
       50.times {|i| User.create! :name => "user#{i}"}
@@ -236,7 +236,7 @@ describe 'Pager::ActionViewExtension' do
 
     context 'on a PaginatableArray' do
       before do
-        @numbers = Pager.paginate_array(%w{one two three}).page(1)
+        @numbers = BootstrapPager.paginate_array(%w{one two three}).page(1)
       end
       subject { helper.page_entries_info @numbers }
       it      { should == 'Displaying <b>all 3</b> entries' }

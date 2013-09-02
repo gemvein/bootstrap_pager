@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 if defined? MongoMapper
-  describe Pager::MongoMapperExtension do
+  describe BootstrapPager::MongoMapperExtension do
     before(:each) do
       User.destroy_all
       41.times { User.create!({:salary => 1}) }

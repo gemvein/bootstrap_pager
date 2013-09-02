@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 if defined? Mongoid
-  describe Pager::MongoidExtension do
+  describe BootstrapPager::MongoidExtension do
     before(:each) do
       41.times do
         User.create!({:salary => 1})
