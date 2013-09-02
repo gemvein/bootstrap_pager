@@ -1,4 +1,4 @@
-module Pager
+module BootstrapPager
   module PageScopeMethods
     # Specify the <tt>per_page</tt> value for the preceding <tt>page</tt> scope
     #   Model.page(3).per(10)

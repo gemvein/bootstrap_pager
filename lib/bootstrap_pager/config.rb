@@ -1,15 +1,15 @@
 require 'active_support/configurable'
 
-module Pager
-  # Configures global settings for Pager
-  #   Pager.configure do |config|
+module BootstrapPager
+  # Configures global settings for BootstrapPager
+  #   BootstrapPager.configure do |config|
   #     config.default_per_page = 10
   #   end
   def self.configure(&block)
-    yield @config ||= Pager::Configuration.new
+    yield @config ||= BootstrapPager::Configuration.new
   end
 
-  # Global settings for Pager
+  # Global settings for BootstrapPager
   def self.config
     @config
   end

@@ -1,4 +1,4 @@
-module Pager
+module BootstrapPager
   module ConfigurationMethods
     extend ActiveSupport::Concern
     module ClassMethods
@@ -13,7 +13,7 @@ module Pager
       # This model's default +per_page+ value
       # returns +default_per_page+ value unless explicitly overridden via <tt>paginates_per</tt>
       def default_per_page
-        (defined?(@_default_per_page) && @_default_per_page) || Pager.config.default_per_page
+        (defined?(@_default_per_page) && @_default_per_page) || BootstrapPager.config.default_per_page
       end
 
       # Overrides the max +per_page+ value per model
@@ -27,7 +27,7 @@ module Pager
       # This model's max +per_page+ value
       # returns +max_per_page+ value unless explicitly overridden via <tt>max_paginates_per</tt>
       def max_per_page
-        (defined?(@_max_per_page) && @_max_per_page) || Pager.config.max_per_page
+        (defined?(@_max_per_page) && @_max_per_page) || BootstrapPager.config.max_per_page
       end
 
       # Overrides the max_pages value per model
@@ -41,7 +41,7 @@ module Pager
       # This model's max_pages value
       # returns max_pages value unless explicitly overridden via <tt>max_pages_per</tt>
       def max_pages
-        (defined?(@_max_pages) && @_max_pages) || Pager.config.max_pages
+        (defined?(@_max_pages) && @_max_pages) || BootstrapPager.config.max_pages
       end
     end
   end

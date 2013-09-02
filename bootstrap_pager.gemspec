@@ -1,18 +1,18 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "pager/version"
+require "bootstrap_pager/version"
 
 Gem::Specification.new do |s|
-  s.name        = 'pager'
-  s.version     = Pager::VERSION
+  s.name        = 'bootstrap_pager'
+  s.version     = BootstrapPager::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Karen Lundgren']
   s.email       = ['webmaster@sourcherryweb.com']
-  s.homepage    = 'https://github.com/nerakdon/pager'
+  s.homepage    = 'https://github.com/nerakdon/bootstrap_pager'
   s.summary     = 'A pagination engine plugin for Rails 3+ or other modern frameworks. Now with more shiny, including infinite paging, bootstrap integration, and the ability to use it within an engine.'
-  s.description = 'Like its ancestor Kaminari, Pager is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 3+. Now with more shiny, including infinite paging, bootstrap integration, and the ability to use it within an engine. '
+  s.description = 'Like its ancestor Kaminari, BootstrapPager is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 3+. Now with more shiny, including infinite paging, bootstrap integration, and the ability to use it within an engine. '
 
-  s.rubyforge_project = 'pager'
+  s.rubyforge_project = 'bootstrap_pager'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

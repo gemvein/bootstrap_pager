@@ -4,7 +4,7 @@ require 'active_support/core_ext/string'
 begin
 
 require 'padrino-helpers'
-module Pager::Helpers
+module BootstrapPager::Helpers
   module SinatraHelpers
     class << self
       def registered(app)
@@ -86,9 +86,9 @@ module Pager::Helpers
       def paginate(scope, options = {}, &block)
         current_path = env['PATH_INFO'] rescue nil
         current_params = Rack::Utils.parse_query(env['QUERY_STRING']).symbolize_keys rescue {}
-        paginator = Pager::Helpers::Paginator.new(
-          ActionViewTemplateProxy.new(:current_params => current_params, :current_path => current_path, :param_name => options[:param_name] || Pager.config.param_name),
-          options.reverse_merge(:current_page => scope.current_page, :total_pages => scope.total_pages, :per_page => scope.limit_value, :param_name => Pager.config.param_name, :remote => false)
+        paginator = BootstrapPager::Helpers::Paginator.new(
+          ActionViewTemplateProxy.new(:current_params => current_params, :current_path => current_path, :param_name => options[:param_name] || BootstrapPager.config.param_name),
+          options.reverse_merge(:current_page => scope.current_page, :total_pages => scope.total_pages, :per_page => scope.limit_value, :param_name => BootstrapPager.config.param_name, :remote => false)
         )
         paginator.to_s
       end
@@ -112,7 +112,7 @@ module Pager::Helpers
       #
       def link_to_next_page(scope, name, options = {})
         params = options.delete(:params) || (Rack::Utils.parse_query(env['QUERY_STRING']).symbolize_keys rescue {})
-        param_name = options.delete(:param_name) || Pager.config.param_name
+        param_name = options.delete(:param_name) || BootstrapPager.config.param_name
         placeholder = options.delete(:placeholder)
         query = params.merge(param_name => (scope.current_page + 1))
         unless scope.last_page?
@@ -131,10 +131,10 @@ end
 
 rescue LoadError
 
-$stderr.puts "[!]You should install `padrino-helpers' gem if you want to use pager's pagination helpers with Sinatra."
-$stderr.puts "[!]Pager::Helpers::SinatraHelper does nothing now..."
+$stderr.puts "[!]You should install `padrino-helpers' gem if you want to use bootstrap_pager's pagination helpers with Sinatra."
+$stderr.puts "[!]BootstrapPager::Helpers::SinatraHelper does nothing now..."
 
-module Pager::Helpers
+module BootstrapPager::Helpers
   module SinatraHelper
     def self.registered(*)
     end

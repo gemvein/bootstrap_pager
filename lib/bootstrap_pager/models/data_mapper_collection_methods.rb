@@ -1,4 +1,4 @@
-module Pager
+module BootstrapPager
   module DataMapperCollectionMethods
     def limit_value #:nodoc:
       query.options[:limit] || 0

@@ -1,4 +1,4 @@
-module Pager
+module BootstrapPager
   # = Helpers
   module ActionViewExtension
     # A helper that renders the pagination links.
@@ -16,7 +16,7 @@ module Pager
     # * <tt>:engine_namespace</tt> - namespace of router (current engine's namespace by default)
     # * <tt>:ANY_OTHER_VALUES</tt> - Any other hash key & values would be directly passed into each tag as :locals value.
     def paginate(scope, options = {}, &block)
-      paginator = Pager::Helpers::Paginator.new self, options.reverse_merge(:current_page => scope.current_page, :total_pages => scope.total_pages, :per_page => scope.limit_value, :param_name => Pager.config.param_name, :remote => false)
+      paginator = BootstrapPager::Helpers::Paginator.new self, options.reverse_merge(:current_page => scope.current_page, :total_pages => scope.total_pages, :per_page => scope.limit_value, :param_name => BootstrapPager.config.param_name, :remote => false)
       paginator.to_s
     end
 
@@ -39,7 +39,7 @@ module Pager
     #   <% end %>
     def link_to_previous_page(scope, name, options = {}, &block)
       params = options.delete(:params) || {}
-      param_name = options.delete(:param_name) || Pager.config.param_name
+      param_name = options.delete(:param_name) || BootstrapPager.config.param_name
       engine_namespace = options.delete(:engine_namespace)
       url = (engine_namespace || self).url_for params.merge(param_name => (scope.current_page - 1))
       link_to_unless scope.first_page?, name, url, options.reverse_merge(:rel => 'previous') do
@@ -66,7 +66,7 @@ module Pager
     #   <% end %>
     def link_to_next_page(scope, name, options = {}, &block)
       params = options.delete(:params) || {}
-      param_name = options.delete(:param_name) || Pager.config.param_name
+      param_name = options.delete(:param_name) || BootstrapPager.config.param_name
       engine_namespace = options.delete(:engine_namespace)
       url = (engine_namespace || self).url_for params.merge(param_name => (scope.current_page + 1))
       link_to_unless scope.last_page?, name, url, options.reverse_merge(:rel => 'next') do
@@ -93,7 +93,7 @@ module Pager
     def page_entries_info(collection, options = {})
       entry_name = if options[:entry_name]
         options[:entry_name]
-      elsif collection.is_a?(::Pager::PaginatableArray)
+      elsif collection.is_a?(::BootstrapPager::PaginatableArray)
         'entry'
       else
         if collection.respond_to? :model  # DataMapper
@@ -133,7 +133,7 @@ module Pager
     #
     def rel_next_prev_link_tags(scope, options = {})
       params = options.delete(:params) || {}
-      param_name = options.delete(:param_name) || Pager.config.param_name
+      param_name = options.delete(:param_name) || BootstrapPager.config.param_name
       engine_namespace = options.delete(:engine_namespace)
 
       output = ""

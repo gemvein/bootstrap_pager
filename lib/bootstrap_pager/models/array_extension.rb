@@ -1,8 +1,8 @@
 require 'active_support/core_ext/module'
-module Pager
+module BootstrapPager
   # Kind of Array that can paginate
   class PaginatableArray < Array
-    include Pager::ConfigurationMethods::ClassMethods
+    include BootstrapPager::ConfigurationMethods::ClassMethods
 
     attr_internal_accessor :limit_value, :offset_value
 
@@ -14,7 +14,7 @@ module Pager
       @_original_array, @_limit_value, @_offset_value, @_total_count, @_padding = original_array, (options[:limit] || default_per_page).to_i, options[:offset].to_i, options[:total_count], options[:padding].to_i
 
       if options[:limit] && options[:offset]
-        extend Pager::PageScopeMethods
+        extend BootstrapPager::PageScopeMethods
       end
 
       if options[:total_count]
@@ -26,7 +26,7 @@ module Pager
 
     # items at the specified "page"
     class_eval <<-RUBY, __FILE__, __LINE__ + 1
-      def #{Pager.config.page_method_name}(num = 1)
+      def #{BootstrapPager.config.page_method_name}(num = 1)
         offset(limit_value * ([num.to_i, 1].max - 1))
       end
     RUBY

@@ -1,17 +1,17 @@
-module Pager
+module BootstrapPager
   module Helpers
     # A tag stands for an HTML tag inside the paginator.
     # Basically, a tag has its own partial template file, so every tag can be
     # rendered into String using its partial template.
     #
-    # The template file should be placed in your app/views/pager/ directory
+    # The template file should be placed in your app/views/bootstrap_pager/ directory
     # with underscored class name (besides the "Tag" class. Tag is an abstract
     # class, so _tag partial is not needed).
-    #   e.g.)  PrevLink  ->  app/views/pager/_prev_link.html.erb
+    #   e.g.)  PrevLink  ->  app/views/bootstrap_pager/_prev_link.html.erb
     #
     # When no matching template were found in your app, the engine's pre
     # installed template will be used.
-    #   e.g.)  Paginator  ->  $GEM_HOME/pager-x.x.x/app/views/pager/_paginator.html.erb
+    #   e.g.)  Paginator  ->  $GEM_HOME/bootstrap_pager-x.x.x/app/views/bootstrap_pager/_paginator.html.erb
     class Tag
       def initialize(template, options = {}) #:nodoc:
         @template, @options = template, options.dup
@@ -22,7 +22,7 @@ module Pager
       end
 
       def to_s(locals = {}) #:nodoc:
-        @template.render :partial => "pager/#{@theme}#{self.class.name.demodulize.underscore}", :locals => @options.merge(locals), :formats => [:html]
+        @template.render :partial => "bootstrap_pager/#{@theme}#{self.class.name.demodulize.underscore}", :locals => @options.merge(locals), :formats => [:html]
       end
 
       def page_url_for(page)

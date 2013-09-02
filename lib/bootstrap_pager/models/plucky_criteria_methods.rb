@@ -1,7 +1,7 @@
-module Pager
+module BootstrapPager
   module PluckyCriteriaMethods
-    include Pager::PageScopeMethods
-    include Pager::ConfigurationMethods::ClassMethods
+    include BootstrapPager::PageScopeMethods
+    include BootstrapPager::ConfigurationMethods::ClassMethods
 
     def limit_value #:nodoc:
       options[:limit]

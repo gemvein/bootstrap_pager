@@ -1,4 +1,4 @@
-module Pager
+module BootstrapPager
   module MongoidCriteriaMethods
     def limit_value #:nodoc:
       options[:limit]

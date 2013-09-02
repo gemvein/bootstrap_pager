@@ -2,9 +2,9 @@ require 'active_support/inflector'
 require 'action_view'
 require 'action_view/log_subscriber'
 require 'action_view/context'
-require 'pager/helpers/tags'
+require 'bootstrap_pager/helpers/tags'
 
-module Pager
+module BootstrapPager
   module Helpers
     # The main container tag
     class Paginator < Tag
@@ -13,11 +13,11 @@ module Pager
 
       def initialize(template, options) #:nodoc:
         @window_options = {}.tap do |h|
-          h[:window] = options.delete(:window) || options.delete(:inner_window) || Pager.config.window
-          outer_window = options.delete(:outer_window) || Pager.config.outer_window
-          h[:left] = options.delete(:left) || Pager.config.left
+          h[:window] = options.delete(:window) || options.delete(:inner_window) || BootstrapPager.config.window
+          outer_window = options.delete(:outer_window) || BootstrapPager.config.outer_window
+          h[:left] = options.delete(:left) || BootstrapPager.config.left
           h[:left] = outer_window if h[:left] == 0
-          h[:right] = options.delete(:right) || Pager.config.right
+          h[:right] = options.delete(:right) || BootstrapPager.config.right
           h[:right] = outer_window if h[:right] == 0
         end
         @template, @options = template, options

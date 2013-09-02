@@ -1,4 +1,4 @@
-module Pager
+module BootstrapPager
   module ActiveRecordRelationMethods
     # a workaround for AR 3.0.x that returns 0 for #count when page > 1
     # if +limit_value+ is specified, load all the records and count them
