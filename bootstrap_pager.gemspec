@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.version     = BootstrapPager::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Karen Lundgren']
-  s.email       = ['webmaster@sourcherryweb.com']
-  s.homepage    = 'https://github.com/nerakdon/bootstrap_pager'
+  s.email       = ['karen.e.lundgren@gmail.com']
+  s.homepage    = 'http://www.gemvein.com/museum/cases/bootstrap_pager'
   s.summary     = 'A pagination engine plugin for Rails 3+ or other modern frameworks. Now with more shiny, including infinite paging, bootstrap integration, and the ability to use it within an engine.'
   s.description = 'Like its ancestor Kaminari, BootstrapPager is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 3+. Now with more shiny, including infinite paging, bootstrap integration, and the ability to use it within an engine. '
 
@@ -33,4 +33,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'capybara', ['>= 1.0']
   s.add_development_dependency 'database_cleaner', ['>= 0']
   s.add_development_dependency 'rdoc', ['>= 0']
+  s.add_development_dependency 'coveralls', ['>= 0']
 end
