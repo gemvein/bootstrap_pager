@@ -34,6 +34,9 @@ Bootstrap Pager supports multiple ORMs (ActiveRecord, Mongoid, MongoMapper) mult
 === Modern
 The pagination helper outputs the HTML5 <nav> tag by default. Plus, the helper supports Rails 3 unobtrusive Ajax.
 
+=== Engine Namespace
+By passing in the `:engine_namespace` option, you can get the pager to use a different helper for your paths.
+
 
 == Supported versions
 
@@ -48,6 +51,12 @@ The pagination helper outputs the HTML5 <nav> tag by default. Plus, the helper s
 * MongoMapper 0.9+
 
 * DataMapper 1.1.0+
+
+* Bootstrap 3
+
+* CSS 3
+
+* HTML 5
 
 == Install
 
