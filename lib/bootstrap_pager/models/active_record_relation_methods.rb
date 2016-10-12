@@ -17,11 +17,11 @@ module BootstrapPager
         c = c.except(:includes) unless references_eager_loaded_tables?
 
         # .group returns an OrderedHash that responds to #count
-        c = c.count(column_name, options)
+        c = c.count(column_name)
         if c.is_a?(Hash) || c.is_a?(ActiveSupport::OrderedHash)
           c.count
         else
-          c.respond_to?(:count) ? c.count(column_name, options) : c
+          c.respond_to?(:count) ? c.count(column_name) : c
         end
       end
     end
