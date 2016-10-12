@@ -26,7 +26,9 @@ module BootstrapPager
       end
 
       def page_url_for(page)
-        (@engine_namespace || @template).url_for @params.merge(@param_name => (page <= 1 ? nil : page))
+        opts = @params.merge(@param_name => (page <= 1 ? nil : page))
+        opts.permit!
+        (@engine_namespace || @template).url_for opts
       end
     end
 
